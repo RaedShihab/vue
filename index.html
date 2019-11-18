@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>
+            Learn Vue.Js
+        </title>
+    </head>
+    <body>
+        <div id="id">
+        <h1>NAME: {{name}}</h1>
+        
+         <form>
+            <input v-model="name">
+            <input type="checkbox" value="AHMED"  v-model="checkedNames">
+            <input type="checkbox" value="RAED"  v-model="checkedNames">
+            <input type="checkbox" value="MO"  v-model="checkedNames">
+            <p v-for='name in checkedNames'>{{name}}</p>
+        </form> 
+          <h1 v-show="name">NAME: {{name}}</h1>
+         <h1 v-if='name'>NAME: {{name}}</h1>
+         <h1 v-if='age === 25'>you are 25 yo</h1>
+         <h1 v-else-if='age === 27'> you are 27</h1>
+         <h1 v-else>you are any thing</h1>
+            <a :href="href">
+            <img :src="src">
+            </a> 
+
+         <button v-on:click='showNewDate'>show new date</button>
+         <ul>
+             <li v-for="(skill, index) in skills">
+                 {{skill}} {{index}}
+             </li>
+         </ul>
+        </div>
+
+        <script src="./vue.js"></script>
+        <script src="./js.js"></script>
+    </body>
+</html>
